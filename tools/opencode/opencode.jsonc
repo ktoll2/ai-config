@@ -1,0 +1,70 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "plan",
+  "plugin": [
+    "opencode-parser@1.1.0"
+  ],
+  "permission": {
+    "read": {
+      "*": "allow",
+      "*.env": "ask",
+      "*.env.*": "ask",
+      "*.key": "ask",
+      "*.pem": "ask",
+      "*.p12": "ask",
+      "*.pfx": "ask",
+      "*credential*": "ask",
+      "*secret*": "ask",
+      "*token*": "ask",
+      "*private*": "ask",
+      ".npmrc": "ask",
+      ".pypirc": "ask",
+      "*.env.example": "allow"
+    },
+    "glob": "allow",
+    "grep": "allow",
+    "webfetch": "ask",
+    "websearch": "ask",
+    "external_directory": "ask",
+    "bash": {
+      "*": "ask",
+      "sudo *": "deny",
+      "rm -rf *": "deny",
+      "git *": "deny",
+      "git status *": "allow",
+      "git diff *": "allow",
+      "git log *": "allow",
+      "git show *": "allow",
+      "git blame *": "allow",
+      "git branch": "allow",
+      "git branch -a": "allow",
+      "git branch -r": "allow",
+      "git branch -v": "allow",
+      "git branch --list": "allow",
+      "git branch --show-current": "allow",
+      "git rev-parse *": "allow",
+      "git merge-base *": "allow",
+      "git symbolic-ref *": "allow",
+      "git remote": "allow",
+      "ls": "allow",
+      "ls *": "allow",
+      "find": "allow",
+      "find *": "allow",
+      "grep": "allow",
+      "grep *": "allow",
+      "head": "allow",
+      "head *": "allow",
+      "tail": "allow",
+      "tail *": "allow",
+      "which": "allow",
+      "which *": "allow",
+      "rg *": "allow",
+      "sed -i*": "ask",
+
+      // Keep these last so they override the broad rules above.
+      "sed --in-place*": "ask",
+      "find *-delete*": "deny",
+      "find *-exec*": "ask"
+    }
+  }
+}
