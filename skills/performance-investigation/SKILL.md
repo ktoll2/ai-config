@@ -18,3 +18,10 @@ description: Use when investigating slow execution, high CPU, memory usage, allo
 7. Repeat measurements after optimization when possible.
 
 Recommend changes based on evidence.
+
+## Output
+
+For each bottleneck: state the measurement that identified it (with numbers,
+not impressions), the suspected cause, the proposed change, and the expected
+effect. After a change, report the re-measured result against the original
+baseline, or state plainly that it wasn't re-measured and why.

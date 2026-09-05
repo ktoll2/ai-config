@@ -1,0 +1,62 @@
+{
+  "permissions": {
+    "ask": [
+      "Read(*.env)",
+      "Read(*.env.*)",
+      "Read(*.key)",
+      "Read(*.pem)",
+      "Read(*.p12)",
+      "Read(*.pfx)",
+      "Read(*credential*)",
+      "Read(*secret*)",
+      "Read(*token*)",
+      "Read(*private*)",
+      "Read(.npmrc)",
+      "Read(.pypirc)",
+      "WebFetch",
+      "WebSearch",
+      "Bash(*)"
+    ],
+    "allow": [
+      "Read(*.env.example)",
+      "Glob",
+      "Grep",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(git blame:*)",
+      "Bash(git branch)",
+      "Bash(git branch -a)",
+      "Bash(git branch -r)",
+      "Bash(git branch -v)",
+      "Bash(git branch --list)",
+      "Bash(git branch --show-current)",
+      "Bash(git rev-parse:*)",
+      "Bash(git merge-base:*)",
+      "Bash(git symbolic-ref:*)",
+      "Bash(git remote)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(which:*)",
+      "Bash(rg:*)"
+    ],
+    "deny": [
+      "Bash(sudo:*)",
+      "Bash(rm -rf:*)",
+      "Bash(git push:*)",
+      "Bash(git reset:*)",
+      "Bash(git checkout:*)",
+      "Bash(git switch:*)",
+      "Bash(git merge:*)",
+      "Bash(git rebase:*)",
+      "Bash(git commit:*)",
+      "Bash(git clean:*)",
+      "Bash(git config:*)",
+      "Bash(find * -delete*)"
+    ]
+  }
+}

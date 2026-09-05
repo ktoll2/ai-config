@@ -26,3 +26,17 @@ Prioritize correctness, data loss or corruption, security, concurrency,
 compatibility, performance, maintainability, and missing tests. Report
 concrete findings first and order them by severity. Do not modify files unless
 explicitly asked.
+
+### Severity
+
+- **Critical**: causes data loss/corruption, a security vulnerability, or a
+  crash/outage in normal use.
+- **High**: incorrect behavior in a common path, a real regression, or a race
+  condition likely to occur in practice.
+- **Medium**: incorrect behavior only in an edge case, a missing test for a
+  meaningful gap, or a performance problem with a plausible real cost.
+- **Low**: maintainability or clarity issues that don't change behavior.
+
+State the concrete failure scenario for each finding (what input or
+condition triggers it) rather than a general concern, so severity is
+justified by evidence, not by how significant the issue merely sounds.
